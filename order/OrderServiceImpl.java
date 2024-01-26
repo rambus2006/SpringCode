@@ -5,10 +5,11 @@ import hello.core.member.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-//@RequiredArgsConstructor //생성자를 만들어줌
+@Primary
 public class OrderServiceImpl implements OrderService {
     //메서드 주입
     private final MemberRepository memberRepository;
